@@ -1,17 +1,15 @@
-# Elevate-labs-cyber-security-internship
-Starting Nmap 7.99 ( https://nmap.org ) at 2026-08-27 14:31 +0530
-Nmap scan report for scanme.nmap.org (45.33.32.156)
-Host is up (0.26s latency).
-Other addresses for scanme.nmap.org (not scanned): 2600:3c01::f03c:91ff:fe18:bb2f
-Not shown: 992 closed tcp ports (conn-refused)
-PORT      STATE    SERVICE
-22/tcp    open     ssh
-25/tcp    filtered smtp
-80/tcp    open     http
-135/tcp   filtered msrpc
-139/tcp   filtered netbios-ssn
-445/tcp   filtered microsoft-ds
-9929/tcp  open     nping-echo
-31337/tcp open     Elite
-
-Nmap done: 1 IP address (1 host up) scanned in 7.59 seconds
+Description
+The screenshot shows the result of an Nmap TCP SYN scan using the command:
+nmap -sT scanme.nmap.org
+Nmap successfully detected that the host scanme.nmap.org (45.33.32.156) is up. The scan identified several TCP ports and their states:
+22/tcp – Open – SSH
+25/tcp – Filtered – SMTP
+80/tcp – Open – HTTP
+135/tcp – Filtered – MSRPC
+139/tcp – Filtered – NetBIOS-SSN
+445/tcp – Filtered – Microsoft-DS
+9929/tcp – Open – nping-echo
+31337/tcp – Open – Elite
+Most other ports (992) were reported as closed.
+Conclusion
+The Nmap scan was completed successfully in 7.59 seconds. The target host is active and has several open TCP ports providing services such as SSH and HTTP. Some ports are filtered, indicating that a firewall or filtering mechanism may be blocking access. This demonstrates how Nmap can be used to identify active hosts, open ports, and associated network services.
